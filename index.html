@@ -4,30 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tragédia no Lar - Festival da Consciência Negra</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    
     <style>
         /* Reset básico */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         /* Cor do fundo */
         body {
-            background-color: #714c35;
-            color: #fef3cc;
+            background-color: #714c35; /* Cor principal de fundo */
+            color: #fef3cc; /* Cor do texto */
             display: flex;
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
             padding: 0 20px;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         /* Container principal */
@@ -35,21 +30,19 @@
             max-width: 1200px;
             width: 100%;
             padding: 30px;
-            background-color: #5d3217;
+            background-color: #5d3217; /* Cor do fundo das seções */
             border-radius: 15px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
-            animation: fadeIn 1s ease-out;
         }
 
         /* Cabeçalho */
         header {
             text-align: center;
             padding: 40px 20px;
-            background-color: #724c34;
+            background-color: #724c34; /* Cor do cabeçalho */
             border-radius: 10px;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
             margin-bottom: 30px;
-            animation: slideIn 1s ease-out;
         }
 
         header h1 {
@@ -57,7 +50,6 @@
             color: #fef3cc;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
         header p {
@@ -98,7 +90,6 @@
             background-color: #724c34;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-            animation: fadeIn 1.5s ease-out;
         }
 
         section h2 {
@@ -107,26 +98,30 @@
             margin-bottom: 15px;
             text-transform: uppercase;
             font-weight: bold;
-            letter-spacing: 1px;
         }
 
         section p {
             font-size: 1.3rem;
             color: #fef3cc;
-            text-align: justify;
+            text-align: left; /* Corrige o espaçamento para dispositivos móveis */
         }
 
         /* Estilo para as imagens nas seções */
         section img {
-            width: 300px;
-            height: 200px;
+            width: 300px; /* Ajusta a largura da imagem */
+            height: 200px; /* Ajusta a altura da imagem */
             object-fit: cover;
             border-radius: 10px;
             margin-top: 20px;
-            display: block;
             margin-left: auto;
             margin-right: auto;
-            animation: zoomIn 1s ease-out;
+            display: block;
+        }
+
+        .preview {
+            font-size: 1.1rem;
+            color: #fef3cc;
+            margin-bottom: 15px;
         }
 
         footer {
@@ -136,27 +131,6 @@
             color: #fef3cc;
             font-size: 1.2rem;
             border-radius: 8px;
-            animation: fadeIn 2s ease-out;
-        }
-
-        /* Botão de links */
-        .btn-social {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 25px;
-            background-color: #724c34;
-            color: #fef3cc;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        .btn-social:hover {
-            background-color: #5d3217;
-            transform: scale(1.05);
         }
 
         /* Responsividade */
@@ -178,44 +152,32 @@
                 font-size: 1rem;
             }
 
-            section img {
-                width: 100%;
-                height: auto;
+            /* Corrige o alinhamento de texto para melhorar a legibilidade */
+            section p {
+                text-align: left;
             }
         }
 
-        /* Animações */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Estilo do botão */
+        #garante-ingresso {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #724c34;
+            color: #fef3cc;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
         }
 
-        @keyframes slideIn {
-            0% {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes zoomIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+        #garante-ingresso:hover {
+            background-color: #5d3217;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -237,14 +199,14 @@
     <!-- Seção Resumo -->
     <section id="resumo">
         <h2>Resumo</h2>
-        <p>A peça Tragédia no Lar expõe os dilemas de uma família em um contexto de opressão social no Brasil do século XIX. Com uma visão crítica, denuncia o sistema escravocrata e a luta por liberdade e dignidade humana.</p>
+        <p>A peça *Tragédia no Lar* expõe os dilemas de uma família em um contexto de opressão social no Brasil do século XIX. Com uma visão crítica, denuncia o sistema escravocrata e a luta por liberdade e dignidade humana.</p>
         <img src="trgdnlt.jpg" alt="Imagem do resumo">
     </section>
 
     <!-- Seção Curiosidades -->
     <section id="curiosidades">
         <h2>Curiosidades</h2>
-        <p>Tragédia no Lar foi escrita por Castro Alves quando ele ainda era muito jovem, abordando de forma inovadora questões sociais complexas, como a escravidão e o racismo. A obra continua sendo um marco literário até hoje.</p>
+        <p>*Tragédia no Lar* foi escrita por Castro Alves quando ele ainda era muito jovem, abordando de forma inovadora questões sociais complexas, como a escravidão e o racismo. A obra continua sendo um marco literário até hoje.</p>
         <img src="cri.jpg" alt="Imagem de curiosidades">
     </section>
 
@@ -265,8 +227,8 @@
     <!-- Seção Sobre o Autor -->
     <section id="autor">
         <h2>Sobre o Autor</h2>
-        <p>Frederico de Castro Alves foi um dos maiores poetas brasileiros, conhecido por sua postura abolicionista e seu ativismo na luta pela liberdade. Sua obra é um grito contra a opressão e um marco na literatura brasileira.</p>
-        <img src="castro.jpg" alt="Imagem de Castro Alves">
+        <p>Frederico de Castro Alves foi um dos maiores poetas brasileiros, conhecido por sua postura abolicionista e seu ativismo na luta pela liberdade. Sua obra é um símbolo da resistência contra o racismo e a opressão.</p>
+        <img src="Castro.jpg" alt="Imagem de Castro Alves">
     </section>
 
     <!-- Link para ingressos -->
