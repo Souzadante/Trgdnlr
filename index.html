@@ -13,16 +13,17 @@
             font-family: 'Arial', sans-serif;
         }
 
-        /* Cor do fundo */
+        /* Cor de fundo */
         body {
-            background-color: #714c35; /* Cor principal de fundo */
-            color: #fef3cc; /* Cor do texto */
+            background-color: #714c35;
+            color: #fef3cc;
             display: flex;
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
             padding: 0 20px;
             line-height: 1.6;
+            transition: all 0.3s ease;
         }
 
         /* Container principal */
@@ -30,7 +31,7 @@
             max-width: 1200px;
             width: 100%;
             padding: 30px;
-            background-color: #5d3217; /* Cor do fundo das seções */
+            background-color: #5d3217;
             border-radius: 15px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
         }
@@ -39,10 +40,11 @@
         header {
             text-align: center;
             padding: 40px 20px;
-            background-color: #724c34; /* Cor do cabeçalho */
+            background-color: #724c34;
             border-radius: 10px;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
             margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
         }
 
         header h1 {
@@ -66,6 +68,7 @@
             margin-top: 20px;
             text-transform: uppercase;
             flex-wrap: wrap;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         nav a {
@@ -90,6 +93,7 @@
             background-color: #724c34;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 2s ease-in-out;
         }
 
         section h2 {
@@ -103,25 +107,45 @@
         section p {
             font-size: 1.3rem;
             color: #fef3cc;
-            text-align: left; /* Corrige o espaçamento para dispositivos móveis */
         }
 
         /* Estilo para as imagens nas seções */
         section img {
-            width: 300px; /* Ajusta a largura da imagem */
-            height: 200px; /* Ajusta a altura da imagem */
+            width: 300px; /* Ajuste de largura */
+            height: 200px; /* Ajuste de altura */
             object-fit: cover;
             border-radius: 10px;
             margin-top: 20px;
             margin-left: auto;
             margin-right: auto;
-            display: block;
+            transition: transform 0.5s ease-in-out;
         }
 
-        .preview {
-            font-size: 1.1rem;
+        section img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilo do botão de ingresso */
+        #btn-ingresso {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #724c34;
             color: #fef3cc;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        #btn-ingresso:hover {
+            background-color: #5d3217;
+            transform: scale(1.05);
         }
 
         footer {
@@ -131,6 +155,47 @@
             color: #fef3cc;
             font-size: 1.2rem;
             border-radius: 8px;
+        }
+
+        footer .social-links {
+            margin-top: 10px;
+        }
+
+        footer .social-links a {
+            color: #fef3cc;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: #724c34;
+            transform: scale(1.1);
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
         }
 
         /* Responsividade */
@@ -151,33 +216,6 @@
             footer {
                 font-size: 1rem;
             }
-
-            /* Corrige o alinhamento de texto para melhorar a legibilidade */
-            section p {
-                text-align: left;
-            }
-        }
-
-        /* Estilo do botão */
-        #garante-ingresso {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background-color: #724c34;
-            color: #fef3cc;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: center;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 30px;
-        }
-
-        #garante-ingresso:hover {
-            background-color: #5d3217;
-            transform: scale(1.05);
         }
     </style>
 </head>
@@ -199,14 +237,14 @@
     <!-- Seção Resumo -->
     <section id="resumo">
         <h2>Resumo</h2>
-        <p>A peça *Tragédia no Lar* expõe os dilemas de uma família em um contexto de opressão social no Brasil do século XIX. Com uma visão crítica, denuncia o sistema escravocrata e a luta por liberdade e dignidade humana.</p>
+        <p>A peça <em>Tragédia no Lar</em> expõe os dilemas de uma família em um contexto de opressão social no Brasil do século XIX. Com uma visão crítica, denuncia o sistema escravocrata e a luta por liberdade e dignidade humana.</p>
         <img src="trgdnlt.jpg" alt="Imagem do resumo">
     </section>
 
     <!-- Seção Curiosidades -->
     <section id="curiosidades">
         <h2>Curiosidades</h2>
-        <p>*Tragédia no Lar* foi escrita por Castro Alves quando ele ainda era muito jovem, abordando de forma inovadora questões sociais complexas, como a escravidão e o racismo. A obra continua sendo um marco literário até hoje.</p>
+        <p><em>Tragédia no Lar</em> foi escrita por Castro Alves quando ele ainda era muito jovem, abordando de forma inovadora questões sociais complexas, como a escravidão e o racismo. A obra continua sendo um marco literário até hoje.</p>
         <img src="cri.jpg" alt="Imagem de curiosidades">
     </section>
 
@@ -220,7 +258,7 @@
     <!-- Seção Contexto Histórico -->
     <section id="contexto">
         <h2>Contexto Histórico</h2>
-        <p>Escrita no período de transição entre o romantismo e o realismo no Brasil, *Tragédia no Lar* reflete o momento histórico de luta pela abolição da escravidão, com Castro Alves sendo uma voz ativa na denúncia das injustiças sociais.</p>
+        <p>Escrita no período de transição entre o romantismo e o realismo no Brasil, <em>Tragédia no Lar</em> reflete o momento histórico de luta pela abolição da escravidão, com Castro Alves sendo uma voz ativa na denúncia das injustiças sociais.</p>
         <img src="contextoh.webp" alt="Imagem do contexto histórico">
     </section>
 
@@ -231,12 +269,15 @@
         <img src="Castro.jpg" alt="Imagem de Castro Alves">
     </section>
 
-    <!-- Link para ingressos -->
+    <!-- Link para Página de Ingressos -->
+    <a id="btn-ingresso" href="ingressos.html">Garanta Seu Ingresso</a>
+
+    <!-- Rodapé -->
     <footer>
-        <a href="ingressos.html" class="btn-social">Garanta seu ingresso aqui</a>
-        <div style="margin-top: 20px;">
-            <a href="https://www.instagram.com/tragedianolar_1a/" class="btn-social" target="_blank">Instagram do Projeto</a>
-            <a href="https://www.instagram.com/lourdinasjp/" class="btn-social" target="_blank" style="margin-left: 10px;">Instagram da Escola</a>
+        <p>Nos siga nas redes sociais para mais informações!</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/tragedianolar_1a/" target="_blank">Instagram Projeto</a>
+            <a href="https://www.instagram.com/lourdinasjp/" target="_blank">Instagram Colégio</a>
         </div>
     </footer>
 </div>
